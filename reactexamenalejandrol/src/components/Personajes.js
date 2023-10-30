@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Global from '../Global'
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
+import loadingImage from "../assets/images/loading.gif";
 
 export default class Personajes extends Component {
 
@@ -72,6 +73,7 @@ export default class Personajes extends Component {
           </table>
         </div>
       )
-    }
+    } else
+      return (<img alt="" className='d-block mx-auto' src={loadingImage} />);
   }
 }

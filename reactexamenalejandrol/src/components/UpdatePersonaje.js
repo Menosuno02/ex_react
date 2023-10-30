@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Global from '../Global'
 import axios from 'axios';
 import { Navigate } from 'react-router-dom';
+import loadingImage from "../assets/images/loading.gif";
 
 export default class UpdatePersonaje extends Component {
   selectSerie = React.createRef();
@@ -107,7 +108,7 @@ export default class UpdatePersonaje extends Component {
                         value={serie.idSerie}>
                         {serie.nombre}
                       </option>
-                    )
+                    );
                   })
                 }
               </select>
@@ -125,7 +126,7 @@ export default class UpdatePersonaje extends Component {
                         value={pers.idPersonaje}>
                         {pers.nombre}
                       </option>
-                    )
+                    );
                   })
                 }
               </select>
@@ -162,6 +163,7 @@ export default class UpdatePersonaje extends Component {
           </div>
         </div >
       );
-    }
+    } else
+      return (<img alt="" className='d-block mx-auto' src={loadingImage} />);
   }
 }
