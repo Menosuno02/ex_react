@@ -63,8 +63,8 @@ export default class UpdatePersonaje extends Component {
     event.preventDefault();
     let url = Global.urlSeries;
     let request = "api/Personajes/" +
-      this.selectPersonaje.current.selectedOptions[0].value + "/"
-      + this.selectSerie.current.selectedOptions[0].value;
+      parseInt(this.selectPersonaje.current.selectedOptions[0].value) + "/"
+      + parseInt(this.selectSerie.current.selectedOptions[0].value);
     axios.put(url + request).then((response) => {
       this.setState({
         statusUpdate: true
