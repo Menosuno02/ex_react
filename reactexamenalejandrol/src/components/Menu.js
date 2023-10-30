@@ -54,12 +54,13 @@ export default class Menu extends Component {
                 this.state.statusSeries &&
                 (
                   <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle"
-                      href="#"
-                      role="button" data-bs-toggle="dropdown"
+                    <span
+                      className="nav-link dropdown-toggle"
+                      role="button"
+                      data-bs-toggle="dropdown"
                       aria-expanded="false">
                       Series
-                    </a>
+                    </span>
                     <ul className="dropdown-menu">
                       {
                         this.state.series.map((serie, index) => {
